@@ -66,7 +66,7 @@
 
 <script setup>
 
-import { reactive, ref, toRefs } from "vue";
+import {onMounted, reactive, ref, toRefs} from "vue";
 import { UserOutlined, LockOutlined } from "@ant-design/icons-vue";
 // import * as API from "../views/Http/Api";
 import { message, notification } from "ant-design-vue";
@@ -80,6 +80,10 @@ const state = reactive({
   },
   loginBtn: false,
 });
+
+onMounted(()=>{
+  console.log('账号：laoliu','密码：123456')
+})
 
 //确定按钮
 const router = useRouter();
@@ -105,6 +109,7 @@ const loginSubmit =  () => {
               description: `老六，欢迎回来`,
             });
           }, 500);
+          console.clear()
   }else {
     if(state.formState.username !== 'laoliu'){
       message.error('请输入正确的账号')

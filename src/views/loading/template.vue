@@ -20,36 +20,69 @@ const router = useRouter();
 // reactive数据
 const state = reactive({
   // userInfo: JSON.parse(localStorage.getItem("userInfo")),
-  selectedKeys: "/border/charge",
+  selectedKeys: "/loading/loading1",
   menu: [
     {
-      title: "充电动画",
-      router: "/border/charge",
+      title: "加载动画",
+      router: "/loading/loading1",
     },
     {
-      title: "动态边框",
-      router: "/border/dynamicBorder",
+      title: "环形进度条",
+      router: "/loading/bar",
     },
     {
-      title: "绳子下坠",
-      router: "/border/line",
+      title: "各种进度条",
+      router: "/loading/progressBar",
     },
     {
-      title: "border-radius变换动画",
-      router: "/border/radiusLoading",
+      title: "渐现文字",
+      router: "/loading/emergenceText",
     },
     {
-      title: "波浪百分比",
-      router: "/border/wave",
+      title: "弹性过度",
+      router: "/loading/inputStyle",
     },
+    {
+      title: "聚光灯",
+      router: "/loading/spotlight",
+    },
+    {
+      title: "智能背景颜色",
+      router: "/loading/colorText",
+    },
+    {
+      title: "滚动视差",
+      router: "/loading/translateZ",
+    },
+    {
+      title: "边框线条",
+      router: "/loading/block",
+    },
+    {
+      title: "断裂文字",
+      router: "/loading/breakText",
+    },
+    {
+      title: "文字故障",
+      router: "/loading/daultText",
+    },
+    {
+      title: "SVG按钮",
+      router: "/loading/svgButton",
+    },
+    {
+      title: "支付宝扫福 ",
+      router: "/loading/Alipay",
+    },
+
   ],
 });
 
 watch(
     () => router.currentRoute.value,
     (path) => {
-      if (path.matched[1].path == "/border") {
-        state.selectedKeys = path.matched[2].path || "/border/charge";
+      if (path.matched[1].path == "/loading") {
+        state.selectedKeys = path.matched[2].path || "/loading/loading1";
       }
     },
     { immediate: true }

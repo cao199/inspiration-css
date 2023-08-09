@@ -95,6 +95,14 @@ const state = reactive({
       title: "边框",
       router: "/border",
     },
+    {
+      title: "动画",
+      router: "/loading",
+    },
+    {
+      title: "渐变",
+      router: "/anamorphism",
+    },
   ],
   // 设置密码
   setAccount: {
@@ -188,6 +196,7 @@ const exit = () => {
         display: flex;
         align-items: center;
 
+
         a {
           display: block;
           margin-right: 16px;
@@ -197,11 +206,20 @@ const exit = () => {
           color: #262626;
           font-weight: normal;
         }
+        //a:hover{
+        //  background: #468eff;
+        //  border-radius: 5px;
+        //  color: #f1f1f1;
+        //}
 
         .isSelect {
-          color: #0968fc;
+          color: #f1f1f1;
           font-weight: bold;
+          background: #0968fc;
+          border-radius: 5px;
+          transition: .5s;
         }
+
       }
     }
 

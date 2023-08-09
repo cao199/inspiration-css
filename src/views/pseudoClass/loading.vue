@@ -13,9 +13,9 @@
 <style scoped lang="less">
 .loading {
   position: relative;
-  font-size: 6vw;
-  width: 500px;
-  height: 100%;
+  font-size: 50px;
+  width: 100%;
+  height: 500px;
   margin: 0 auto;
   text-align: center;
   line-height: 500px;
@@ -44,10 +44,10 @@
 //loading2
 .loading2 {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  margin: 100px auto;
+  margin: 50px auto;
   transform: rotate(360deg);
   animation: rotate 45s infinite linear;
 }

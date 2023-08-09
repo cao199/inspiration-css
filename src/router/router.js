@@ -132,6 +132,7 @@ const routes = [
                 ]
             },
             {
+                //伪类
                 path: 'pseudoClass',
                 name: 'pseudoClass',
                 redirect: '/pseudoClass/hoverStop',
@@ -170,7 +171,7 @@ const routes = [
             ]
             },
             {
-                // 布局,
+                // 滤镜
                 path: 'filter',
                 name: 'filter',
                 redirect: '/filter/loading',
@@ -210,6 +211,7 @@ const routes = [
                 ]
             },
             {
+                //边框
                 path: 'border',
                 name: 'border',
                 redirect: '/border/charge',
@@ -218,7 +220,7 @@ const routes = [
                     {
                         path:'charge',
                         meta:{
-                            title:'活用 border-radius, 实现充电动画'
+                            title:' border-radius, 实现充电动画'
                         },
                         component: () => import('../views/border/charge.vue')
                     },
@@ -242,6 +244,144 @@ const routes = [
                             title:'border-radius变换实现loading效果'
                         },
                         component: () => import('../views/border/radiusLoading.vue')
+                    },
+                    {
+                        path:'wave',
+                        meta:{
+                            title:' border-radius, 实现波浪百分比图'
+                        },
+                        component: () => import('../views/border/wave.vue')
+                    },
+                ]
+            },
+            {
+                // loading
+                path: 'loading',
+                name: 'loading',
+                redirect: '/loading/loading1',
+                component:()=>import('../views/loading/template.vue'),
+                children:[
+                    {
+                        path:'loading1',
+                        meta:{
+                            title:'加载动画集合...'
+                        },
+                        component: () => import('../views/loading/loading1.vue')
+                    },
+                    {
+                        path:'bar',
+                        meta:{
+                            title:'角向渐变实现纯 CSS 圆环进度图'
+                        },
+                        component: () => import('../views/loading/bar.vue')
+                    },
+                    {
+                        path:'emergenceText',
+                        meta:{
+                            title:'mask-image 实现文字的渐现'
+                        },
+                        component: () => import('../views/loading/emergenceText.vue')
+                    },
+                    {
+                        path:'progressBar',
+                        meta:{
+                            title:'进度条集合...'
+                        },
+                        component: () => import('../views/loading/progressBar.vue')
+                    },
+                    {
+                        path:'inputStyle',
+                        meta:{
+                            title:'多重背景单标签实现气泡按钮点击效果'
+                        },
+                        component: () => import('../views/loading/inputStyle.vue')
+                    },
+                    {
+                        path:'spotlight',
+                        meta:{
+                            title:'径向渐变实现舞台灯光聚焦效果'
+                        },
+                        component: () => import('../views/loading/spotlight.vue')
+                    },
+                    {
+                        path:'colorText',
+                        meta:{
+                            title:'基于混合模式让文字智能适配背景颜色'
+                        },
+                        component: () => import('../views/loading/colorText.vue')
+                    },
+                    {
+                        path:'translateZ',
+                        meta:{
+                            title:'使用 translateZ 实现滚动视差'
+                        },
+                        component: () => import('../views/loading/translateZ.vue')
+                    },
+                    {
+                        path:'block',
+                        meta:{
+                            title:' clip-path 实现边框线条动画'
+                        },
+                        component: () => import('../views/loading/block.vue')
+                    },
+                    {
+                        path:'breakText',
+                        meta:{
+                            title:'文字断裂效果....'
+                        },
+                        component: () => import('../views/loading/breakText.vue')
+                    },
+
+                    {
+                        path:'daultText',
+                        meta:{
+                            title:'光影按钮'
+                        },
+                        component: () => import('../views/loading/daultText.vue')
+                    },
+                    {
+                        path:'svgButton',
+                        meta:{
+                            title:'SVG feTurbulence 滤镜实现故障按钮点击效果'
+                        },
+                        component: () => import('../views/loading/svgButton.vue')
+                    },
+                    {
+                        path:'Alipay',
+                        meta:{
+                            title:' SVG 支付宝AR扫福动画'
+                        },
+                        component: () => import('../views/loading/Alipay.vue')
+                    },
+            ]
+            },
+            {
+                //渐变
+                path: 'anamorphism',
+                name: 'anamorphism',
+                redirect: '/anamorphism/attachment',
+                component:()=>import('../views/anamorphism/template.vue'),
+                children:[
+                    {
+                        path:'attachment',
+                        meta:{
+                            title:'使用 background-attachment 实现毛玻璃效果'
+                        },
+                        component: () => import('../views/anamorphism/attachment.vue')
+                    },
+                    {
+                        path:'drain',
+                        meta:{
+                            title:'background-clip 实现流光文字效果'
+                        },
+                        component: () => import('../views/anamorphism/drain.vue')
+                    },
+                    {
+                        path:'dynamicBorder',
+                        meta:{
+                            title:'角向渐变实现光影 border 效果'
+                        },
+                        component: () => import('../views/anamorphism/dynamicBorder.vue')
                     },
                 ]
             }

@@ -1,7 +1,6 @@
 <template>
   <page-wrapper>
      <div class="bg" :style="{background: `linear-gradient(45deg,${state.color1}, ${state.color2}, ${state.color3})`}"></div>
-
   </page-wrapper>
 </template>
 

@@ -20,36 +20,32 @@ const router = useRouter();
 // reactive数据
 const state = reactive({
   // userInfo: JSON.parse(localStorage.getItem("userInfo")),
-  selectedKeys: "/border/charge",
+  selectedKeys: "/anamorphism/attachment",
   menu: [
     {
-      title: "充电动画",
-      router: "/border/charge",
+      title: "毛玻璃效果",
+      router: "/anamorphism/attachment",
+    },
+    {
+      title: "流光文字",
+      router: "/anamorphism/drain",
     },
     {
       title: "动态边框",
-      router: "/border/dynamicBorder",
+      router: "/anamorphism/dynamicBorder",
     },
-    {
-      title: "绳子下坠",
-      router: "/border/line",
-    },
-    {
-      title: "border-radius变换动画",
-      router: "/border/radiusLoading",
-    },
-    {
-      title: "波浪百分比",
-      router: "/border/wave",
-    },
+    // {
+    //   title: "发票信息",
+    //   router: "/anamorphism/invoice",
+    // },
   ],
 });
 
 watch(
     () => router.currentRoute.value,
     (path) => {
-      if (path.matched[1].path == "/border") {
-        state.selectedKeys = path.matched[2].path || "/border/charge";
+      if (path.matched[1].path == "/anamorphism") {
+        state.selectedKeys = path.matched[2].path || "/anamorphism/attachment";
       }
     },
     { immediate: true }

@@ -1,5 +1,6 @@
 <template>
   <page-wrapper >
+
     <div class="box">
       <div class="drip">O L D S I X</div>
     </div>
@@ -53,10 +54,12 @@
   80% {
     bottom : -30px;
     transform: translate(623px, 0);
-  } 93% {
+  }
+  93% {
       transform: translate(623px, 3px);
       opacity: 1;
-    }100% {
+    }
+  100% {
        transform: translate(623px, 150px);
        opacity: 0;
      }
